@@ -11,7 +11,7 @@ export const Requests = () => {
     }
     </ul>
   `
-// html +=  request.join("")
+
 return html
 
  

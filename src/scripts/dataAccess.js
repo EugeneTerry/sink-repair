@@ -1,5 +1,7 @@
+// json-server database.json -p 8088 -w -This will start your json server
+
 const applicationState = {
-  //request: [] 
+  request: [] 
 
 }
 
