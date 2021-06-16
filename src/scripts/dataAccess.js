@@ -32,10 +32,12 @@ export const sendRequest = (userServiceRequest) => {
       body: JSON.stringify(userServiceRequest) //convert from javascript to json
   }
 
-
+//to dispatch the custom event after the POST operation has been completed.
   return fetch(`${API}/requests`, fetchOptions)
       .then(response => response.json())
       .then(() => {
-
+        document.dispatchEvent(new CustomEvent("stateChanged"))
       })
-}
+    }
+    
+    
