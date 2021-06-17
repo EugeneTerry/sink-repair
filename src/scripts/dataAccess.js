@@ -40,4 +40,13 @@ export const sendRequest = (userServiceRequest) => {
       })
     }
     
-    
+//now we are making a function whose responsiblity it is to initiate the fetch request for DELETE
+
+export const deleteRequest = (id) => {
+  return fetch(`${API}/requests/${id}`, { method: "DELETE" })
+      .then(
+          () => {
+            document.dispatchEvent(new CustomEvent("stateChanged"))
+          }
+      )
+}

@@ -1,4 +1,5 @@
 import { sendRequest } from "./dataAccess.js"
+import { deleteRequest } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container") //stage our event listener
 
@@ -23,6 +24,12 @@ mainContainer.addEventListener("click", clickEvent => {
     }
 })
 
+mainContainer.addEventListener("click", click => {
+  if (click.target.id.startsWith("request--")) {
+      const [,requestId] = click.target.id.split("--")
+      deleteRequest(parseInt(requestId))
+  }
+})
 
 export const ServiceForm = () => {
   let html = `

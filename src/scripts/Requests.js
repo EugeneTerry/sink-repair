@@ -6,9 +6,12 @@ export const Requests = () => {
  let html = `
     <ul> 
       ${requests.map(request => {
-        return `<li> ${request.description} </li>`
-      }).join("")
-    }
+        return `<li> ${request.description} <button class="request__delete"
+          id="request--${request.id}">Delete
+          </button>
+          </li>`
+        }).join("")
+      }
     </ul>
   `
 
