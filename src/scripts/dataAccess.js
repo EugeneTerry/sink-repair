@@ -34,19 +34,19 @@ export const sendRequest = (userServiceRequest) => {
 
 //to dispatch the custom event after the POST operation has been completed.
   return fetch(`${API}/requests`, fetchOptions)
-      .then(response => response.json())
-      .then(() => {
-        document.dispatchEvent(new CustomEvent("stateChanged"))
-      })
+    .then(response => response.json())
+    .then(() => {
+      document.dispatchEvent(new CustomEvent("stateChanged"))
     }
+  )
+}
     
 //now we are making a function whose responsiblity it is to initiate the fetch request for DELETE
 
 export const deleteRequest = (id) => {
   return fetch(`${API}/requests/${id}`, { method: "DELETE" })
-      .then(
-          () => {
-            document.dispatchEvent(new CustomEvent("stateChanged"))
-          }
-      )
+    .then(
+      () => {document.dispatchEvent(new CustomEvent("stateChanged"))
+    }
+  )
 }
