@@ -31,6 +31,37 @@ mainContainer.addEventListener("click", click => {
   }
 })
 
+mainContainer.addEventListener(
+  "change",
+  (event) => {
+      if (event.target.id === "plumbers") {
+          const [userRequestId, userPlumberId] = event.target.value.split("--")
+
+          /*
+              This object should have 3 properties
+                 1. requestId
+                 2. plumberId
+                 3. date_created
+          */
+          const completion = {
+            requestId: userRequestId,
+            plumberId: userPlumberId,
+            date_created: userDateCreated
+           }
+
+          /*
+              Invoke the function that performs the POST request
+              to the `completions` resource for your API. Send the
+              completion object as a parameter.
+           */
+          //sendRequest(completionToSendToAPI)
+
+      }
+  }
+)
+
+
+
 export const ServiceForm = () => {
   let html = `
     <div class="field">

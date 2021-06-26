@@ -1,3 +1,9 @@
+.header{
+  display:flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .label {
   flex-direction: column;
   display: flex;
@@ -21,4 +27,10 @@
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
+}
+
+.logo{
+  max-height: 10rem;
+	padding: 10px;
+	border-radius: 10pc;
 }

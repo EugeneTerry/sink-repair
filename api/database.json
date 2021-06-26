@@ -1,5 +1,36 @@
 {
-  "plumbers": [],
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 2,
+      "name": "Merle"
+    }
+  ],
   "completions": [],
-  "requests": []
+  "requests": [
+    {
+      "description": "fix the bottom sink",
+      "address": "567771 New work drive",
+      "budget": "46.33",
+      "neededBy": "2020-02-01",
+      "id": 2
+    },
+    {
+      "description": "fix everything",
+      "address": "545 wak away lane",
+      "budget": "45556.00",
+      "neededBy": "3030-05-07",
+      "id": 3
+    },
+    {
+      "description": "help my cat",
+      "address": "lol lane",
+      "budget": "46.00",
+      "neededBy": "2021-06-26",
+      "id": 4
+    }
+  ]
 }
