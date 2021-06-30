@@ -7,7 +7,7 @@ export const Requests = () => {
  let html = `
     <ul> 
       ${requests.map(request => {
-        return `<li> ${request.description} 
+        return `<li class= "requestDisplay"> ${request.description} 
        
           <select class="plumbers" id="plumbers">
             <option value="">Choose</option>
@@ -17,7 +17,6 @@ export const Requests = () => {
           )
         }
         </select>
-
         <button class="request__delete"
         id="request--${request.id}">Delete
         </button>

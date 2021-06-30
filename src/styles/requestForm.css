@@ -27,6 +27,17 @@
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
+ 
+  
+}
+
+.requestDisplay {
+  background-color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    border-color: black;
+    border-style: solid;
+
 }
 
 .logo{

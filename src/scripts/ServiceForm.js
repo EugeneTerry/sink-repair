@@ -1,5 +1,6 @@
 import { sendRequest } from "./dataAccess.js"
 import { deleteRequest } from "./dataAccess.js"
+import { saveCompletion } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container") //stage our event listener
 
@@ -36,25 +37,26 @@ mainContainer.addEventListener(
   (event) => {
       if (event.target.id === "plumbers") {
           const [userRequestId, userPlumberId] = event.target.value.split("--")
-
           /*
               This object should have 3 properties
                  1. requestId
                  2. plumberId
                  3. date_created
           */
+         const d = new Date(); 
           const completion = {
             requestId: userRequestId,
             plumberId: userPlumberId,
-            date_created: userDateCreated
-           }
+            date_created: (`${d.getMonth()+1}/${d.getDate()+1}/${d.getFullYear()} ${d.toLocaleTimeString()}`)
+          }
+          
 
           /*
               Invoke the function that performs the POST request
               to the `completions` resource for your API. Send the
               completion object as a parameter.
            */
-          //sendRequest(completionToSendToAPI)
+          saveCompletion(completion)
 
       }
   }
@@ -80,8 +82,9 @@ export const ServiceForm = () => {
       <label class="label" for="serviceDate">Date needed</label>
       <input type="date" name="serviceDate" class="input" />
     </div>
-
+    
       <button class="button" id="submitRequest">Submit Request</button>
+    
   `
 
   return html
