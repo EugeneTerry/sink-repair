@@ -9,20 +9,13 @@
       "name": "Merle"
     }
   ],
-  "completions": [
-    {
-      "requestId": "1",
-      "plumberId": "1",
-      "date_created": "6/30/2021 10:38:07 PM",
-      "id": 1
-    }
-  ],
+  "completions": [],
   "requests": [
     {
-      "description": "fgfgg",
-      "address": "gfgfgf",
-      "budget": "55555",
-      "neededBy": "2021-06-17",
+      "description": "s",
+      "address": "s",
+      "budget": "111",
+      "neededBy": "2021-07-02",
       "id": 1
     }
   ]

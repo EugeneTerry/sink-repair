@@ -27,6 +27,7 @@
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
+  width: 40rem;
  
   
 }
