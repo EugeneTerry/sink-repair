@@ -6,7 +6,7 @@ const applicationState = {
 
 }
 
-const API = "http://localhost:8088"
+const API = "http://localhost:3000"
 
 export const fetchRequests = () => {
   return fetch(`${API}/requests`)
